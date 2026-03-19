@@ -2,27 +2,22 @@ import ButtonLogin from "@/components/ButtonLogin";
 import FAQListItem from "@/components/FAQListItem";
 import Image from "next/image";
 import productDemo from "@/app/productDemo.jpeg";
-import { auth } from "@/auth";
 
-export default async function Home() {
-  const session = await auth();
-
+export default function Home() {
   return (
     <main>
       {/* HEADER */}
       <section className="bg-base-200">
         <div className="max-w-5xl mx-auto bg-base-200 flex justify-between items-center px-8 py-2">
           <div className="font-bold">CodeFastSaaS</div>
-          <div className="space-x-4 max-md:hidden">
+          <div className="space-x-4 max-md:hidden flex items-center">
             <a className="link link-hover" href="#pricing">
               Pricing
             </a>
             <a className="link link-hover" href="#faq">
               FAQ
             </a>
-          </div>
-          <div>
-            <ButtonLogin session={session} />
+            <ButtonLogin />
           </div>
         </div>
       </section>
@@ -43,7 +38,7 @@ export default async function Home() {
             products your customers will love.
           </div>
 
-          <ButtonLogin session={session} />
+          <ButtonLogin />
         </div>
       </section>
       {/* PRICING */}
@@ -87,7 +82,7 @@ export default async function Home() {
               ))}
             </ul>
 
-            <ButtonLogin session={session} extraStyle="w-full" />
+            <ButtonLogin extraStyle="w-full" />
           </div>
         </div>
       </section>

@@ -2,8 +2,12 @@ import ButtonLogin from "@/components/ButtonLogin";
 import FAQListItem from "@/components/FAQListItem";
 import Image from "next/image";
 import productDemo from "@/app/productDemo.jpeg";
+import { auth } from "@/auth";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+  console.log(session);
+
   return (
     <main>
       {/* HEADER */}
@@ -17,7 +21,7 @@ export default function Home() {
             <a className="link link-hover" href="#faq">
               FAQ
             </a>
-            <ButtonLogin />
+            <ButtonLogin session={session} />
           </div>
         </div>
       </section>
@@ -38,7 +42,7 @@ export default function Home() {
             products your customers will love.
           </div>
 
-          <ButtonLogin />
+          <ButtonLogin session={session} />
         </div>
       </section>
       {/* PRICING */}
@@ -82,7 +86,7 @@ export default function Home() {
               ))}
             </ul>
 
-            <ButtonLogin extraStyle="w-full" />
+            <ButtonLogin session={session} extraStyle="w-full" />
           </div>
         </div>
       </section>

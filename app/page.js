@@ -13,7 +13,7 @@ export default async function Home() {
       {/* HEADER */}
       <section className="bg-base-200">
         <div className="max-w-5xl mx-auto bg-base-200 flex justify-between items-center px-8 py-2">
-          <div className="font-bold">CodeFastSaaS</div>
+          <div className="font-bold">FeatureShip</div>
           <div className="space-x-4 max-md:hidden flex items-center">
             <a className="link link-hover" href="#pricing">
               Pricing
@@ -103,9 +103,11 @@ export default async function Home() {
 
           <ul className="max-w-lg mx-auto">
             {[
-              { question: "What do I get exactly", answer: "Loreum Ipseum" },
-              { question: "Can I get a refund", answer: "Loreum Ipseum" },
-              { question: "I have another question", answer: "Loreum Ipseum" },
+              { question: "Who is this for?", answer: "Anyone building a product who wants one clear place to collect feedback and understand which features matter most." },
+              { question: "How fast can I get started?", answer: "You can create your first board in minutes and start collecting feedback the same day." },
+              { question: "How does billing work?", answer: "Billing is simple and handled securely through Stripe.  You can manage your subscription directly from your account." },
+              { question: "Is any training required?", answer: "No.  FeatureShip is designed to be simple and intuitive, so you can start using it right away." },
+              { question: "Can I get a refund?", answer: "Yes.  If FeatureShip is not the right fit, you can request a full refund within the first 7 days after purchase." },
             ].map((qa) => (
               <FAQListItem key={qa.question} qa={qa} />
             ))}

@@ -54,7 +54,7 @@ export default async function Home() {
           <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center">
             A pricing that adapts to your needs
           </h2>
-        <div className="p-8 bg-base-100 w-full max-w-sm rounded-3xl mx-auto space-y-6">
+        <div className="p-8 bg-base-100 w-full max-w-sm rounded-3xl mx-auto px-4 space-y-6">
             <div className="flex gap-2 items-baseline">
               <div className="text-4xl font-black">$19</div>
               <div className="uppercase text-sm font-medium opacity-60">

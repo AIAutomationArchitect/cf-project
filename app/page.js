@@ -47,7 +47,7 @@ export default async function Home() {
       </section>
       {/* PRICING */}
       <section className="bg-blue-200" id="pricing">
-       <div className="py-32 px-4 md:px-8 max-w-3xl mx-auto">
+       <div className="py-32 px-8 max-w-3xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary mb-4">
             Pricing
           </p>
